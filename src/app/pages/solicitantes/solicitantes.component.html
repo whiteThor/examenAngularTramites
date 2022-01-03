@@ -1,0 +1,41 @@
+<h2>Solilcitante</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <th> # </th>
+                    <th> Tipo Identificacion </th>
+                    <th> Identificaicon </th>
+                    <th> Nombre </th>
+                    <th> Apellido</th>
+ 
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let solicitante of solicitantes; let indice=index">
+                    <td>{{ indice + 1 }}</td>
+                    <td>{{solicitante.tipoIdentificacion}}</td>
+                    <td>{{solicitante.identificacion}}</td>
+                    <td>{{solicitante.nombres}}</td>
+                    <td>{{solicitante.apellidos}}</td>
+
+
+    
+                </tr>
+            </tbody>
+        </table>
+        <div class="my-2 text-left">
+            <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/solicitantes/form']">
+              Crear Solicitante
+            </button>
+          </div>
+    </div>
+
+</div>

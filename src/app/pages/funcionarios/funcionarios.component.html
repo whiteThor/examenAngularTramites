@@ -1,0 +1,43 @@
+<h2>Funcionarios</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <th> # </th>
+                    <th> Tipo Identificacion </th>
+                    <th> Identificaicon </th>
+                    <th> Nombre </th>
+                    <th> Apellido</th>
+                    <th> Dependencia</th>
+                    <th> Fecha ingreso</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let funcionario of funcionarios; let indice=index">
+                    <td>{{ indice + 1 }}</td>
+                    <td>{{funcionario.tipoIdentificacion}}</td>
+                    <td>{{funcionario.identificacion}}</td>
+                    <td>{{funcionario.nombres}}</td>
+                    <td>{{funcionario.apellidos}}</td>
+                    <td>{{funcionario.dependencia}}</td>
+                    <td>{{funcionario.fechaIngreso}}</td>
+
+    
+                </tr>
+            </tbody>
+        </table>
+        <div class="my-2 text-left">
+            <button class="btn btn-rounded btn-primary" type="button" [routerLink]="['/funcionarios/form']">
+              Crear Funcionario
+            </button>
+          </div>
+    </div>
+
+</div>

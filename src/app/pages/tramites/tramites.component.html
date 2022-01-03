@@ -1,0 +1,35 @@
+<h2>Tramites</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <th> # </th>
+                    <th> Numero Radicado </th>
+                    <th> Año Radicacion </th>
+                    <th> Nombre Tramite</th>
+                    <th> Descripcion</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tramite of tramites; let indice=index">
+                    <td>{{ indice + 1 }}</td>
+                    <td>{{tramite.numeroRadicado}}</td>
+                    <td>{{tramite.anioRadicado}}</td>
+                    <td>{{tramite.nombreTramite}}</td>
+                    <td>{{tramite.descripcionTramite}}</td>
+
+
+    
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+</div>

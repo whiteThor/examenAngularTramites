@@ -1,0 +1,57 @@
+<div class="card bg-light">
+    <div class="card-header">Formulario de Funcionarios</div>
+    <div class="card-body">
+
+      <form   #miFormulario="ngForm">
+        <div class="form-group row">
+          <label for="tipo" class="col-form-label col-sm-3">Tipo Identificacion</label>
+          <div class="col-sm-6">
+            <input required type="text" class="form-control" [(ngModel)]="funcionario.tipoIdentificacion" name="tipo">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="identificacion" class="col-form-label col-sm-3">Identificaicon</label>
+          <div class="col-sm-6">
+            <input required type="text" class="form-control" [(ngModel)]="funcionario.identificacion" name="identificacion">
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label for="nombre" class="col-form-label col-sm-3">Nombre</label>
+          <div class="col-sm-6">
+            <input required type="text" class="form-control" [(ngModel)]="funcionario.nombres" name="nombre">
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-form-label col-sm-3">Apellido</label>
+            <div class="col-sm-6">
+              <input required type="apellido" class="form-control" [(ngModel)]="funcionario.apellidos" name="apellido">
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <label for="dependencia" class="col-form-label col-sm-3">Dependencia</label>
+            <div class="col-sm-6">
+              <input required type="text" class="form-control" [(ngModel)]="funcionario.dependencia" name="dependencia">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="fechaIngreso" class="col-form-label col-sm-3 this.router.navigate(['/clientes'])
+            swal('Nuevo cliente', `Cliente ${cliente.nombre} creado con éxito!`, 'success')">Fecha de ingreso</label>
+            <div class="col-sm-6">
+              <input required type="text" class="form-control" [(ngModel)]="funcionario.fechaIngreso" name="fechaIngreso">
+            </div>
+          </div>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <button [disabled]="miFormulario.invalid" class="btn btn-primary" role="button" (click)='create()' >Crear</button>
+  
+
+          </div>
+        </div>
+      </form>
+  
+    </div>
+  </div>
+  
